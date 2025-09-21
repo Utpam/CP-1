@@ -3,7 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import AuthStack from './src/navigation/AuthStack';
-import MainTab from './src/navigation/MainTabs';
+// import MainTab from './src/navigation/MainTabs';
+import StaffStack from './src/navigation/StaffStack';
+import StudentsStack from './src/navigation/StudentsStack';
 
 const Root = createNativeStackNavigator();
 
@@ -18,7 +20,8 @@ export default function App() {
         <Root.Screen name="Auth" component={AuthStack} />
 
         {/* MainTabs is the bottom-tab flow */}
-        {/* <Root.Screen name="MainTab" component={MainTab} /> */}
+        <Root.Screen name="StaffStack" component={StaffStack} />
+        <Root.Screen name="StudentsStack" component={StudentsStack} />
       </Root.Navigator>
     </NavigationContainer>
   );
