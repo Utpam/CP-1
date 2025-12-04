@@ -2,6 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MenuScreen from '../screens/StudentScreens/MenuScreen';
+import CartScreen from '../screens/StudentScreens/CartScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,14 @@ export default function AuthStack() {
                 component={MenuScreen}
                 options={{
                     title: 'Menu',
+                    headerBackVisible: false,
+                }}
+            />
+            <Stack.Screen
+                name="CartScreen"
+                component={CartScreen}
+                options={{
+                    title: 'CartScreen',
                     headerBackVisible: false,
                 }}
             />

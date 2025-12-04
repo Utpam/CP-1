@@ -1,5 +1,5 @@
 {
-  "name": "waste-app",
+  "name": "Canteen App",
   "license": "0BSD",
   "version": "1.0.0",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "2.1.2",
+    "@react-native-async-storage/async-storage": "^2.1.2",
     "@react-native-community/netinfo": "^11.4.1",
     "@react-native-picker/picker": "^2.11.2",
     "@react-navigation/bottom-tabs": "^7.4.7",
