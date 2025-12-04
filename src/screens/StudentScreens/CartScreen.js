@@ -40,7 +40,9 @@ export default function CartScreen() {
       console.warn('persist error', e);
     }
   };
-
+const openCart1 = () => {
+    navigation.navigate('FadeSlideBox');
+  };
   const placeOrder = async () => {
   if (cartItems.length === 0) {
     Alert.alert('Empty', 'Cart is empty');
@@ -58,7 +60,6 @@ export default function CartScreen() {
     // optionally navigate to login screen: navigation.navigate('Auth')
     return;
   }
-
   // prepare payload
   const orderItems = cartItems.map(e => ({
     id: e.item.id,
@@ -104,7 +105,12 @@ export default function CartScreen() {
   return (
     <View style={styles.safe}>
       <Text style={styles.header}>Your Cart</Text>
-
+      <TouchableOpacity style={styles.cartFloatBtn} onPress={openCart1} activeOpacity={0.85}>
+                  <Ionicons name="cart" size={26} color="#08203a" />
+                  <View style={styles.cartBadge}>
+                    <Text style={styles.cartBadgeText}>4</Text>
+                  </View>
+                </TouchableOpacity>
       <FlatList
         data={cartItems}
         keyExtractor={(e) => String(e.item.id)}
